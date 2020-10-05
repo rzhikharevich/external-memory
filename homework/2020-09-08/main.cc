@@ -84,7 +84,7 @@ u64 do_test_seq_read(const std::string& path, usize size) {
 
 
 Result TestSequentialRead(const std::string& path) {
-    constexpr usize n_iters = 10;
+    constexpr usize n_iters = 5;
     constexpr usize size_mb = 1024;
     constexpr usize size = size_mb * (1 << 20);
 
@@ -115,7 +115,7 @@ u64 do_test_seq_write(const std::string& path, usize size) {
 
 
 Result TestSequentialWrite(const std::string& path) {
-    constexpr usize n_iters = 10;
+    constexpr usize n_iters = 5;
     constexpr usize size_mb = 1024;
     constexpr usize size = size_mb * (1 << 20);
 
