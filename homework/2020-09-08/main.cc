@@ -67,6 +67,7 @@ void prepare_for_reading(const std::string& path, usize size) {
 
     const auto& data = get_bytes(size);
     file.write(0, size, data.data());
+    file.sync_data();
 }
 
 
