@@ -88,8 +88,8 @@ public:
         );
 #elif defined(__APPLE__)
         XMEM_ENSURE(
-            fcntl(fd, F_FULLFSYNC, 0) > -1,
-            // fsync(fd) == 0,
+            // fcntl(fd, F_FULLFSYNC, 0) > -1,
+            fsync(fd) == 0,
             "Sync failed: " << std::strerror(errno)
         );
 #else
